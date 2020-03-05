@@ -1,0 +1,29 @@
+type Query {
+  link(id: ID!): Link
+  links: [Link!]!
+}
+
+type Mutation {
+  createLink(input: CreateLinkInput!): Link!
+  updateLink(id: ID!, description: String, url: String, level: LevelEnum): Link
+  deleteLink(id: ID!): String 
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
+  level: LevelEnum
+}
+
+input CreateLinkInput{
+  url: String!
+  description: String!
+  level: LevelEnum
+}
+
+enum LevelEnum {
+  EASY
+  NORMAL
+  HARD
+}
