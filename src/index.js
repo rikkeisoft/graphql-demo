@@ -30,9 +30,9 @@ const resolvers = {
     updateLink: (root, {id, description, url, level}, context, info) => {
       links = links.map(link => {
         if(link.id === id){
-          link.description = description ? description : '',
-          link.url = url ? url : '',
-          link.level = level ? level : null
+          link.description = description ? description : link.description,
+          link.url = url ? url : link.url ,
+          link.level = level ? level : link.level
         }
         return link
       })
