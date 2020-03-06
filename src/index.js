@@ -2,8 +2,8 @@ const { GraphQLServer } = require('graphql-yoga')
 
 let links = [{
   id: 'link-0',
-  url: 'www.howtographql.com',
-  description: 'Fullstack tutorial for GraphQL'
+  url: 'www.rikkeisoft.com',
+  description: 'Rikkeisoft Homepage'
 }]
 
 let idCount = links.length
